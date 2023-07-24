@@ -1,0 +1,5 @@
+train: /media/leo/새 볼륨/traffic_light/train
+val: /media/leo/새 볼륨/traffic_light/valid
+
+nc: 5
+names: ['green','left','red','straightleft','yellow']

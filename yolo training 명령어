@@ -1,0 +1,14 @@
+python3 train.py --img 640 --batch 16 --epochs 3 --data coco128.yaml --weights yolov5s.pt
+python3 train.py --img 640 --batch 16 --epochs 3 --data coco.yaml --weights yolov5s.pt
+
+python3 train.py --img 416 --batch 16 --epochs 100 --data /home/leo/yolo/datasets/people_wearing_mask /data.yaml --cfg ./models/yolov5s.yaml --weights yolov5s.pt --name hansome_check
+
+
+/home/leo/yolo/yolov5/models
+python3 train.py --img 416 --batch 2 --epochs 10 --data /home/leo/yolo/datasets/people_wearing_mask/data.yaml --cfg ./models/yolov5s.yaml  --name hansome_results
+
+/media/leo/새 볼륨/traffic_light
+나온 가중치파일로 감지하는 명령어
+python3 ./detect.py --weight /home/leo/yolo/yolov5/runs/train/hansome_results/weights/best.pt --img 416 --conf 0.5 --source 0
+
+python3 train.py --img 416 --batch 16 --epochs 150 --data /home/leo/yolo/datasets/people_wearing_mask/data.yaml --cfg ./models/yolov5s.yaml 
